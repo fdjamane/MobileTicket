@@ -68,7 +68,7 @@ public class HomeActivity extends Activity {
 		 testObject.put("foo", "bar");
 		 testObject.saveInBackground();
 		 
-		 
+		// test
 		// Set up an instance of SystemUiHider to control the system UI for
 		// this activity.
 		mSystemUiHider = SystemUiHider.getInstance(this, contentView,
