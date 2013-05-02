@@ -177,4 +177,14 @@ public class HomeActivity extends Activity {
 		mHideHandler.removeCallbacks(mHideRunnable);
 		mHideHandler.postDelayed(mHideRunnable, delayMillis);
 	}
+	
+	/**
+	 * MethodeAppelée lors d'un click sur le boutton BuyTickets
+	 */
+	public void goToBuyTickets(view View)
+	{
+		// should do something
+	}
+	}
+	 */
 }
