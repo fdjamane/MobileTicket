@@ -3,7 +3,7 @@
 
     <string name="app_name">MobileTicket</string>
     <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="dummy_content">Mobile Ticket</string>
     <string name="my_tickets">My Tickets</string>
     <string name="buy_tickets">Buy Tickets</string>
     <string name="plan_trip">Plan Trip</string>

@@ -28,7 +28,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int Button01=0x7f070008;
         public static final int PlanTrip=0x7f070007;
         public static final int buyTickets=0x7f070004;
-        public static final int dummy_button=0x7f07000b;
         public static final int fullscreen_content=0x7f070000;
         public static final int fullscreen_content_controls=0x7f07000a;
         public static final int myTickets=0x7f070005;
