@@ -1,9 +1,12 @@
 package com.example.mobileticket;
 
+import com.parse.*;
+
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -52,6 +55,15 @@ public class LoginActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+		// Initialize the Parse App
+		 Parse.initialize(this, "OoEq00KyYQBv7yp8NJceMKzRcBPOF7IudqrLwWwy", "6wfQRgxZ4bMOdL1stY82HeSe3HNOJVzCIfkRFHfj"); 
+		 		
+		 ParseAnalytics.trackAppOpened(getIntent());
+		 
+		 ParseObject testObject = new ParseObject("TestObject");
+		 testObject.put("foo", "bar");
+		 testObject.saveInBackground();		
+		
 		setContentView(R.layout.activity_login);
 
 		// Set up the login form.
@@ -148,6 +160,31 @@ public class LoginActivity extends Activity {
 			mAuthTask = new UserLoginTask();
 			mAuthTask.execute((Void) null);
 		}
+		// GAT :regardons maintenant si nous avons un user
+		ParseUser currentUser = ParseUser.getCurrentUser();
+		if (currentUser != null) {
+		  // Affichons la page menu
+			Intent intent = new Intent(this, HomeActivity.class);
+			startActivity(intent);
+		} else {
+		  // show the signup or login screen
+			// Intent intent = new Intent(this, LoginActivity.class);
+			// startActivity(intent);
+			// ou créons plutôt le user :)
+			ParseUser user = new ParseUser();
+			user.setUsername(mEmail);
+			user.setPassword(mPassword);
+			user.setEmail(mEmail);
+			
+			try {user.signUp();
+			}
+			catch (Exception e)
+			{ 
+			}
+			// et passons à la page suivante
+			Intent intent = new Intent(this, HomeActivity.class);
+			startActivity(intent);
+		}
 	}
 
 	/**
@@ -199,7 +236,16 @@ public class LoginActivity extends Activity {
 		@Override
 		protected Boolean doInBackground(Void... params) {
 			// TODO: attempt authentication against a network service.
-
+			// GAT : utilisation de la procédure de Login PARSE.com
+			try {
+				ParseUser.logIn(mEmail, mPassword);
+			}
+			catch (Exception e) { 
+				return false;
+			} 
+			
+			// GAT : mise en commentaire de la vérif de login "Dummy"
+			/*
 			try {
 				// Simulate network access.
 				Thread.sleep(2000);
@@ -214,6 +260,7 @@ public class LoginActivity extends Activity {
 					return pieces[1].equals(mPassword);
 				}
 			}
+			*/
 
 			// TODO: register the new account here.
 			return true;

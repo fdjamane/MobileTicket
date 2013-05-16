@@ -69,6 +69,7 @@
                 android:layout_marginTop="16dp"
                 android:paddingLeft="32dp"
                 android:paddingRight="32dp"
+            	android:onClick="processLogin"
                 android:text="@string/action_sign_in_register" />
         </LinearLayout>
     </ScrollView>

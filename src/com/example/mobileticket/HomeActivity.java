@@ -1,6 +1,7 @@
 package com.example.mobileticket;
 
 import android.annotation.TargetApi;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
@@ -8,12 +9,14 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
-//import android.widget.EditText;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.mobileticket.util.SystemUiHider;
 import com.parse.Parse;
 import com.parse.ParseAnalytics;
 import com.parse.ParseObject;
+import com.parse.ParseUser;
 
 // Comment added by Gautier
 // just to see if I can commit....
@@ -63,13 +66,13 @@ public class HomeActivity extends Activity {
 		final View contentView = findViewById(R.id.fullscreen_content);
 
 		// Initialize the Parse App
-		 Parse.initialize(this, "OoEq00KyYQBv7yp8NJceMKzRcBPOF7IudqrLwWwy", "6wfQRgxZ4bMOdL1stY82HeSe3HNOJVzCIfkRFHfj"); 
+		 // Parse.initialize(this, "OoEq00KyYQBv7yp8NJceMKzRcBPOF7IudqrLwWwy", "6wfQRgxZ4bMOdL1stY82HeSe3HNOJVzCIfkRFHfj"); 
 		 		
-		 ParseAnalytics.trackAppOpened(getIntent());
+		 // ParseAnalytics.trackAppOpened(getIntent());
 		 
-		 ParseObject testObject = new ParseObject("TestObject");
-		 testObject.put("foo", "bar");
-		 testObject.saveInBackground();
+		 // ParseObject testObject = new ParseObject("TestObject");
+		 // testObject.put("foo", "bar");
+		 // testObject.saveInBackground();
 		 
 		// test
 		// Set up an instance of SystemUiHider to control the system UI for
@@ -117,6 +120,16 @@ public class HomeActivity extends Activity {
 					}
 				});
 
+		// GAT Affiche un Welcome message
+		ParseUser currentUser = ParseUser.getCurrentUser();
+		if (currentUser != null) {
+			TextView welcomeView;
+			welcomeView = (TextView) findViewById(R.id.welcome);
+			welcomeView.setText("Welcome "+currentUser.getUsername());
+		} else {
+		}
+
+		
 		// Set up the user interaction to manually show or hide the system UI.
 		contentView.setOnClickListener(new View.OnClickListener() {
 			@Override
