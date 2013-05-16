@@ -8,5 +8,6 @@
     <string name="buy_tickets">Buy Tickets</string>
     <string name="plan_trip">Plan Trip</string>
     <string name="CheckIn">Check In</string>
+    <string name="title_activity_my_tickets">MyTickets</string>
 
 </resources>

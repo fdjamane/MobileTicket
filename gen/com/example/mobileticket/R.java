@@ -25,20 +25,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int Button01=0x7f070008;
-        public static final int PlanTrip=0x7f070007;
-        public static final int buyTickets=0x7f070004;
+        public static final int Button01=0x7f070007;
+        public static final int HomeButton=0x7f07000a;
+        public static final int PlanTrip=0x7f070006;
+        public static final int buyTickets=0x7f070003;
         public static final int fullscreen_content=0x7f070000;
-        public static final int fullscreen_content_controls=0x7f07000a;
-        public static final int myTickets=0x7f070005;
+        public static final int fullscreen_content_controls=0x7f070009;
+        public static final int myTickets=0x7f070004;
         public static final int tableRow1=0x7f070001;
-        public static final int tableRow2=0x7f070003;
-        public static final int tableRow3=0x7f070006;
-        public static final int tableRow4=0x7f070009;
-        public static final int textView1=0x7f070002;
+        public static final int tableRow2=0x7f070002;
+        public static final int tableRow3=0x7f070005;
+        public static final int tableRow4=0x7f070008;
     }
     public static final class layout {
         public static final int activity_home=0x7f030000;
+        public static final int activity_my_tickets=0x7f030001;
     }
     public static final class string {
         public static final int CheckIn=0x7f050006;
@@ -48,6 +49,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int dummy_content=0x7f050002;
         public static final int my_tickets=0x7f050003;
         public static final int plan_trip=0x7f050005;
+        public static final int title_activity_my_tickets=0x7f050007;
     }
     public static final class style {
         /** 

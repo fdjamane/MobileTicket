@@ -36,14 +36,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
-            <TextView
+              <!--  <TextView
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="Large Text"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
-
+				-->
+				
         </TableRow>
 
         <TableRow
@@ -114,7 +115,7 @@
             android:layout_gravity="bottom|center_horizontal"
             android:background="@color/black_overlay"
             android:orientation="horizontal"
-            tools:ignore="UselessParent" >*/
+            tools:ignore="UselessParent" >
                 
 
         </LinearLayout>
