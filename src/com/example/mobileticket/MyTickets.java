@@ -1,14 +1,15 @@
 package com.example.mobileticket;
 
-import com.example.mobileticket.util.SystemUiHider;
-
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+
+import com.example.mobileticket.util.SystemUiHider;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -158,5 +159,11 @@ public class MyTickets extends Activity {
 	private void delayedHide(int delayMillis) {
 		mHideHandler.removeCallbacks(mHideRunnable);
 		mHideHandler.postDelayed(mHideRunnable, delayMillis);
+	}
+	
+	public void goToHomeActivity (View view)
+	{
+		Intent intent = new Intent(this, HomeActivity.class);
+		startActivity(intent);
 	}
 }

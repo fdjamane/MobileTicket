@@ -33,6 +33,11 @@
             android:label="@string/title_activity_my_tickets"
             android:theme="@style/FullscreenTheme" >
         </activity>
+        <activity
+            android:name="com.example.mobileticket.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
     </application>
 
 </manifest>

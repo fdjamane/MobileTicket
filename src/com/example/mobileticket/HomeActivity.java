@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.EditText;
+//import android.widget.EditText;
 
 import com.example.mobileticket.util.SystemUiHider;
 import com.parse.Parse;
@@ -183,13 +183,14 @@ public class HomeActivity extends Activity {
 	 */
 	public void goToBuyTickets(View view)
 	{
-		Intent intent = new Intent(this, MyTickets.class);
-		startActivity(intent);
+		
 	}
 
 	public void goToMyTickets(View view)
 	{
 		// should do something
+		Intent intent = new Intent(this, MyTickets.class);
+		startActivity(intent);
 	}
 	
 	 
