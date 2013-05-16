@@ -7,6 +7,6 @@
     <string name="my_tickets">My Tickets</string>
     <string name="buy_tickets">Buy Tickets</string>
     <string name="plan_trip">Plan Trip</string>
-    <string />
+    <string name="CheckIn">Check In</string>
 
 </resources>

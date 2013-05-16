@@ -181,10 +181,12 @@ public class HomeActivity extends Activity {
 	/**
 	 * MethodeAppelée lors d'un click sur le boutton BuyTickets
 	 */
-	public void goToBuyTickets(view View)
+	public void goToBuyTickets(View view)
 	{
 		// should do something
 	}
-	}
-	 */
+
+	
+	 
+/**/
 }

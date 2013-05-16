@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="goToMyTickets"
-                android:text="@string/MyTickets" />
+                android:text="@string/my_tickets" />
 
         </TableRow>
 
@@ -80,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="goToMyTickets"
-                android:text="@string/PlanTrip" />
+                android:text="@string/plan_trip" />
 
             <Button
                 android:id="@+id/Button01"
