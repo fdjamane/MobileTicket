@@ -27,10 +27,11 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:theme="@style/FullscreenTheme" >
-<<<<<<< HEAD
+<!-- <<<<<<< HEAD
 =======
             
->>>>>>> 1db261f14a3a312ff614fb5b549a26d8cfc7f727
+>>>>>>> 1db261f14a3a312ff614fb5b549a26d8cfc7f727   -->
+
         </activity>
         <activity
             android:name="com.example.mobileticket.MyTickets"
@@ -38,9 +39,9 @@
             android:label="@string/title_activity_my_tickets"
             android:theme="@style/FullscreenTheme" >
         </activity>
-<<<<<<< HEAD
+<!-- <<<<<<< HEAD
         
-=======
+======= 
         <activity
             android:name="com.example.mobileticket.LoginActivity"
             android:label="@string/title_activity_login"
@@ -50,8 +51,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
->>>>>>> 1db261f14a3a312ff614fb5b549a26d8cfc7f727
+        </activity> -->
+<!--   >>>>>>> 1db261f14a3a312ff614fb5b549a26d8cfc7f727 -->
     </application>
 
 </manifest>
