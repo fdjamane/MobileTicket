@@ -9,5 +9,8 @@
     <string name="plan_trip">Plan Trip</string>
     <string name="CheckIn">Check In</string>
     <string name="title_activity_my_tickets">MyTickets</string>
+    <string name="title_activity_new_user">NewUserActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>
