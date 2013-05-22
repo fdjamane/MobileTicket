@@ -45,6 +45,8 @@ public class NewUserActivity extends Activity {
 
 	public void createUser(View view)
 	{
+		mUserNameView = (EditText) findViewById(R.id.userName);
+
 		mEmail = mEmailView.getText().toString();
 		mPassword = mPasswordView.getText().toString();
 		mUserName = mUserNameView.getText().toString();
