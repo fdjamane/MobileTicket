@@ -33,6 +33,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
+        public static final int ticket_pic=0x7f020001;
     }
     public static final class id {
         public static final int Button01=0x7f090008;
@@ -43,16 +44,16 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int buyTickets=0x7f090004;
         public static final int cancel=0x7f09001b;
         public static final int confirm=0x7f09001a;
-        public static final int email=0x7f09000e;
+        public static final int email=0x7f09000d;
         public static final int fullscreen_content=0x7f090000;
-        public static final int fullscreen_content_controls=0x7f09000a;
-        public static final int login=0x7f090010;
-        public static final int login_form=0x7f09000d;
-        public static final int login_status=0x7f09000b;
-        public static final int login_status_message=0x7f09000c;
+        public static final int fullscreen_content_controls=0x7f090011;
+        public static final int login=0x7f09000f;
+        public static final int login_form=0x7f09000c;
+        public static final int login_status=0x7f09000a;
+        public static final int login_status_message=0x7f09000b;
         public static final int myTickets=0x7f090005;
-        public static final int password=0x7f09000f;
-        public static final int sign_in_button=0x7f090011;
+        public static final int password=0x7f09000e;
+        public static final int sign_in_button=0x7f090010;
         public static final int tableRow1=0x7f090001;
         public static final int tableRow2=0x7f090003;
         public static final int tableRow3=0x7f090006;
