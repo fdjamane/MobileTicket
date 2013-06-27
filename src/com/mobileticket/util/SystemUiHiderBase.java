@@ -1,4 +1,4 @@
-package com.example.mobileticket.util;
+package com.mobileticket.util;
 
 import android.app.Activity;
 import android.view.View;

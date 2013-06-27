@@ -1,5 +1,6 @@
-package com.example.mobileticket;
+package com.mobileticket;
 
+import com.mobileticket.R;
 import com.parse.*;
 import android.os.Bundle;
 import android.app.Activity;

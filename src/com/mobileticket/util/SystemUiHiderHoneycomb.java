@@ -1,4 +1,4 @@
-package com.example.mobileticket.util;
+package com.mobileticket.util;
 
 import android.annotation.TargetApi;
 import android.app.Activity;

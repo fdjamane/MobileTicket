@@ -1,6 +1,7 @@
-package com.example.mobileticket;
+package com.mobileticket;
 
 import android.annotation.TargetApi;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
@@ -8,8 +9,18 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
-import com.example.mobileticket.util.SystemUiHider;
+import com.mobileticket.R;
+import com.mobileticket.util.SystemUiHider;
+import com.parse.Parse;
+import com.parse.ParseAnalytics;
+import com.parse.ParseObject;
+import com.parse.ParseUser;
+
+// Comment added by Gautier
+// just to see if I can commit....
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -17,7 +28,7 @@ import com.example.mobileticket.util.SystemUiHider;
  * 
  * @see SystemUiHider
  */
-public class MyTickets extends Activity {
+public class HomeActivity extends Activity {
 	/**
 	 * Whether or not the system UI should be auto-hidden after
 	 * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -50,11 +61,21 @@ public class MyTickets extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		setContentView(R.layout.activity_my_tickets);
+		setContentView(R.layout.activity_home);
 
 		final View controlsView = findViewById(R.id.fullscreen_content_controls);
 		final View contentView = findViewById(R.id.fullscreen_content);
 
+		// Initialize the Parse App
+		 // Parse.initialize(this, "OoEq00KyYQBv7yp8NJceMKzRcBPOF7IudqrLwWwy", "6wfQRgxZ4bMOdL1stY82HeSe3HNOJVzCIfkRFHfj"); 
+		 		
+		 // ParseAnalytics.trackAppOpened(getIntent());
+		 
+		 // ParseObject testObject = new ParseObject("TestObject");
+		 // testObject.put("foo", "bar");
+		 // testObject.saveInBackground();
+		 
+		// test
 		// Set up an instance of SystemUiHider to control the system UI for
 		// this activity.
 		mSystemUiHider = SystemUiHider.getInstance(this, contentView,
@@ -100,6 +121,16 @@ public class MyTickets extends Activity {
 					}
 				});
 
+		// GAT Affiche un Welcome message
+		ParseUser currentUser = ParseUser.getCurrentUser();
+		if (currentUser != null) {
+			TextView welcomeView;
+			welcomeView = (TextView) findViewById(R.id.welcome);
+			welcomeView.setText("Welcome "+currentUser.getUsername());
+		} else {
+		}
+
+		
 		// Set up the user interaction to manually show or hide the system UI.
 		contentView.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -116,7 +147,7 @@ public class MyTickets extends Activity {
 		// operations to prevent the jarring behavior of controls going away
 		// while interacting with the UI.
 		//findViewById(R.id.dummy_button).setOnTouchListener(
-		//		mDelayHideTouchListener);
+			//	mDelayHideTouchListener);
 	}
 
 	@Override
@@ -161,9 +192,21 @@ public class MyTickets extends Activity {
 		mHideHandler.postDelayed(mHideRunnable, delayMillis);
 	}
 	
-	public void goToHomeActivity (View view)
+	/**
+	 * MethodeAppelée lors d'un click sur le boutton BuyTickets
+	 */
+	public void goToBuyTickets(View view)
 	{
-		Intent intent = new Intent(this, HomeActivity.class);
+		
+	}
+
+	public void goToMyTickets(View view)
+	{
+		// should do something
+		Intent intent = new Intent(this, MyTickets.class);
 		startActivity(intent);
 	}
+	
+	 
+/**/
 }
